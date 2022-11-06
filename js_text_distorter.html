@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .color{
+        background-color: yellow;
+        
+    }
+    #box{
+        width: 200px;
+        height: 200px;
+        background-color: yellow;
+    }
+</style>
+<body>
+
+<input id="user" type="text"> 
+<button > Distort my text </button>
+<p></p>
+
+<script>
+
+//function works if you call it on its own
+    function twister (userWord){
+        if(typeof userWord !== "string") {
+            console.error("Try using words..."); 
+            return;
+        }
+        else {
+            userWord = userWord.replace(/r/g, "w");
+            userWord = userWord.replace(/R/g, "W");
+    
+            return userWord;
+            console.log(userWord);
+        }
+    
+        
+    }
+    
+
+
+let user = document.getElementById("user");
+let btn = document.querySelector("button");
+let p = document.querySelector("p");
+
+let userWord= user.value;
+
+//how to take user input and use it as argument so it s processed by the function 
+// then we create a html element and insert new converted text :)
+btn.addEventListener("click", () => {
+
+});
+
+
+
+</script>
+</body>
+</html>
